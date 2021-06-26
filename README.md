@@ -14,8 +14,8 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/samirhembrom/Frontend-Mentor---Sunnyside-agency-landing-page-solution)
+- Live Site URL: [Add live site URL here](https://frontend-mentor-sunnyside-agency-landing-page-solution.vercel.app/)
 
 ## My process
 
