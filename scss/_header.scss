@@ -1,0 +1,169 @@
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1.8em 1em;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    .header__logo {
+      display: inline-block;
+      width: 124px;
+      height: 24px;
+      align-self: flex-end;
+      img {
+        object-fit: cover;
+      }
+      &:focus {
+        box-shadow: 0 0 0 3px #151515;
+      }
+    }
+
+    .nav {
+      &__list {
+        position: absolute;
+        top: 5.8em;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style: none;
+        width: 90%;
+        background: $n-color-5;
+        padding: 1em;
+        @include transition-ease-out;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 100%;
+          right: 0%;
+          width: 0;
+          height: 0;
+          border-bottom: 25px solid $n-color-5;
+          border-left: 25px solid transparent;
+        }
+      }
+
+      &__item {
+        text-align: center;
+      }
+      &__link {
+        font-family: $f-1;
+        display: inline-block;
+        text-decoration: none;
+        color: $n-color-3;
+        padding: 1em 2em;
+      }
+      .button-yellow {
+        font-family: $f-2;
+        background: $p-color-2;
+        color: #000;
+        text-transform: uppercase;
+        border-radius: 100px;
+      }
+    }
+  }
+
+  .menu-btn {
+    height: 25px;
+    width: 25px;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      box-shadow: 0 0 0 3px #151515;
+    }
+
+    &__burger {
+      display: block;
+      position: relative;
+      @include transition-ease-out;
+      width: 25px;
+      height: 2px;
+      background: $n-color-5;
+      @include transition-ease-out;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        background: $n-color-5;
+        @include transition-ease-out;
+      }
+      &::before {
+        bottom: 8px;
+      }
+
+      &::after {
+        top: 8px;
+      }
+    }
+  }
+  .open .menu-btn__burger {
+    transform: rotate(45deg);
+  }
+
+  .open .menu-btn__burger::before {
+    opacity: 0;
+  }
+
+  .open .menu-btn__burger::after {
+    transform: rotate(90deg) translateX(-8px);
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+  @include transition-ease-out;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .entrance {
+    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .exit {
+    animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+}
+
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-28px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 4 {
+  .entrance:nth-child(#{$i}) {
+    animation-delay: ($i * 0.1s) + 0.15s;
+  }
+  .exit:nth-child(#{$i}) {
+    animation-delay: ($i * 0.1s) + 0.15s;
+  }
+} ;

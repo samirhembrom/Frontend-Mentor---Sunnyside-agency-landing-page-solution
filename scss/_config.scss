@@ -1,0 +1,33 @@
+$f-1: 'Barlow', sans-serif;
+$f-2: 'Fraunces', serif;
+$fw-600: 600;
+$fw-700: 700;
+$fw-900: 900;
+
+$p-color-1: hsl(7, 99%, 70%);
+$p-color-2: hsl(51, 100%, 49%);
+$p-color-3: hsl(167, 40%, 24%);
+$p-color-4: hsl(198, 62%, 26%);
+$p-color-5: hsl(168, 50%, 61%);
+
+$n-color-1: hsl(212, 27%, 19%);
+$n-color-2: hsl(213, 9%, 39%);
+$n-color-3: hsl(232, 10%, 55%);
+$n-color-4: hsl(210, 4%, 67%);
+$n-color-5: hsl(0, 0%, 100%);
+
+@mixin transition-ease-out {
+  transition: all 0.5s ease-out;
+}
+
+@mixin animation {
+  @media screen and (prefers-reduced-motion: no-preference) {
+  }
+}
+
+
+@mixin media-md {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}

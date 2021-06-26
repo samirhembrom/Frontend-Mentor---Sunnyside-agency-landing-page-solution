@@ -1,0 +1,219 @@
+.main {
+  .hero {
+    height: 540px;
+    background-image: url('/images/mobile/image-header.jpg');
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      font-family: $f-2;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: $n-color-5;
+      letter-spacing: 0.5rem;
+      margin-bottom: 1.5em;
+    }
+
+    a:focus {
+      box-shadow: 0 0 0 3px #151515;
+    }
+  }
+
+  .grid-four {
+    display: grid;
+    grid-template-rows: 312px auto 312px auto;
+
+    &__img-transform {
+      background-image: url('/images/mobile/image-transform.jpg');
+      background-size: cover;
+      grid-row-start: 1;
+    }
+    &__img-standout {
+      background-image: url('/images/mobile/image-stand-out.jpg');
+      background-size: cover;
+      grid-row-start: 3;
+    }
+    &__text {
+      padding: 3em 1em;
+      &-wrapper {
+        text-align: center;
+
+        &__title {
+          font-family: $f-2;
+          font-weight: $fw-900;
+          font-size: 2rem;
+          color: $n-color-1;
+          margin-bottom: 1em;
+        }
+        &__paragraph {
+          font-family: $f-1;
+          color: $n-color-2;
+          padding: 0 2px;
+          line-height: 1.5em;
+        }
+        .yellow-btn {
+          &::after {
+            background: $p-color-2;
+          }
+        }
+        .red-btn {
+          &::after {
+            background: $p-color-1;
+          }
+        }
+        .btn-learn-more {
+          font-family: $f-2;
+          font-weight: $fw-900;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: inline-block;
+          margin-top: 2em;
+          color: $n-color-1;
+          position: relative;
+          z-index: 4;
+
+          &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -2px;
+
+            opacity: 0.3;
+            border-radius: 100px;
+            height: 10px;
+            width: 110%;
+            z-index: 2;
+            transform: translateX(-4%);
+            z-index: -1;
+          }
+
+          &:hover::after {
+            opacity: 1;
+          }
+
+          &:focus {
+            box-shadow: 0 0 0 3px #151515;
+          }
+        }
+      }
+    }
+  }
+
+  .grid-two {
+    display: grid;
+    grid-template-rows: repeat(2, 602px);
+
+    &__cherry {
+      background-image: url('/images/mobile/image-graphic-design.jpg');
+      background-size: cover;
+      position: relative;
+      .wrapper {
+        color: hsl(167, 40%, 16%);
+      }
+    }
+
+    &__orange {
+      .wrapper {
+        color: hsl(198, 60%, 21%);
+      }
+      position: relative;
+      background-image: url('/images/mobile/image-photography.jpg');
+      background-size: cover;
+    }
+
+    .wrapper {
+      position: absolute;
+      bottom: 5em;
+      text-align: center;
+
+      &__title {
+        font-family: $f-2;
+        font-weight: 900;
+        font-size: 1.7rem;
+        margin-bottom: 1em;
+      }
+      &__paragraph {
+        font-family: $f-1;
+        font-weight: 600;
+        line-height: 1.5em;
+        font-size: 0.98rem;
+        padding: 0 1em;
+      }
+    }
+  }
+
+  .testimonials {
+    padding: 4em 0;
+    text-align: center;
+
+    &__title {
+      font-family: $f-2;
+      font-size: 1.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: hsl(210, 2%, 50%);
+    }
+
+    &__card {
+      margin-top: 2em;
+      padding: 1em 1.21em;
+
+      img {
+        border-radius: 100%;
+        height: 74px;
+        margin-bottom: 2em;
+      }
+
+      &-paragraph {
+        font-family: $f-1;
+        line-height: 1.5em;
+        color: $n-color-2;
+      }
+
+      &-name,
+      &-role {
+        display: block;
+      }
+      &-name {
+        font-family: $f-2;
+        font-weight: $fw-900;
+        color: $n-color-1;
+        margin-top: 1.5em;
+      }
+      &-role {
+        font-family: $f-1;
+        margin-top: 1em;
+        color: hsl(0, 0%, 40%);
+      }
+    }
+  }
+
+  .grid-four-two {
+    height: 375px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    .milkbottles {
+      background-image: url('/images/mobile/image-gallery-milkbottles.jpg');
+      background-size: cover;
+    }
+    .orange {
+      background-image: url('/images/mobile/image-gallery-orange.jpg');
+      background-size: cover;
+    }
+    .cone {
+      background-image: url('/images/mobile/image-gallery-cone.jpg');
+      background-size: cover;
+    }
+    .sugarcubes {
+      background-image: url('/images/mobile/image-gallery-sugar-cubes.jpg');
+      background-size: cover;
+    }
+  }
+}

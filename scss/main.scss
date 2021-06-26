@@ -1,0 +1,28 @@
+@import 'config';
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'responsive';
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.125rem;
+}
+
+a:focus {
+  box-shadow: 0 0 0 3px #151515;
+  outline: none;
+}

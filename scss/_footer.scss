@@ -1,0 +1,57 @@
+.footer {
+  background: $p-color-5;
+  text-align: center;
+  padding: 3em 1em;
+  &__logo {
+    display: inline-block;
+    height: 24px;
+    width: 124px;
+    &:focus {
+      box-shadow: 0 0 0 3px #151515;
+    }
+  }
+
+  &__nav {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    &__list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+    &__link {
+      text-decoration: none;
+      font-family: $f-1;
+      font-weight: $fw-600;
+      color: hsl(170, 97%, 13%);
+
+      &:hover {
+        color: $n-color-5;
+      }
+      &:focus {
+        box-shadow: 0 0 0 3px #151515;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin: 0 auto;
+
+    a {
+      height: 20px;
+      width: 20px;
+      svg {
+        fill: $p-color-3;
+        &:hover {
+          fill: $n-color-5;
+        }
+      }
+      &:focus {
+        box-shadow: 0 0 0 3px #151515;
+      }
+    }
+  }
+}
